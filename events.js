@@ -10,18 +10,23 @@
 // The last section's text should be bold and italicized.
 // Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
 
+var output = document.getElementById("output-target");
 
 
-// var title = document.getElementById("page-header");
-// title.addEventListener("mouseover", function() {
+var title = document.getElementById("page-header");
 
-// });
+
+
+
+
+
 
 var pig = document.getElementById("guinea-pig");
 var color = document.getElementById("add-color");
 var hulk = document.getElementById("make-large");
 var capture = document.getElementById("add-border");
 var round = document.getElementById("add-rounding");
+
 
 console.log('hello');
 
@@ -31,7 +36,7 @@ color.addEventListener("click", function() {
 })
 
 hulk.addEventListener("click", function() {
-	pig.style.fontsize = '100px';
+	pig.style.fontSize = '100px';
 	console.log('big');
 })
 
@@ -44,4 +49,16 @@ round.addEventListener("click", function() {
 	pig.style.borderRadius = '1em';
 	console.log('round')
 })
+
+
+var input = document.getElementById("keypress-input");
+input.addEventListener('keyup', function(e) {
+	if(e.keyCode === 13) {
+		var input = document.getElementById("keypress-input").value;
+		var reverse = input.split('').reverse().join('');
+		output.innerHTML = reverse;
+	}
+});
+
+
 

@@ -6,7 +6,7 @@
 </head>
 <body>
   <header id="page-header">
-    <h1 id="page-title">Page title</h1>
+    <h1 id="page-title" onMouseOver="output.innerHTML = 'You moved your mouse over the header';" onmouseleave="output.innerHTML = 'You left me!!'">Page title</h1>
   </header>
 
   <ul>
@@ -16,12 +16,14 @@
   </ul>
 
   <article>
-    <section class="article-section">Introduction</section>
-    <section class="article-section">Body</section>
-    <section class="article-section">Section 1</section>
-    <section class="article-section">Section 2</section>
-    <section class="article-section">Section 3</section>
-    <section class="article-section">Conclusion</section>
+    <section class="article-section"><a onclick="output.innerHTML = 'You clicked on the Introduction section'">Introduction</a></section>
+
+    <section class="article-section"><a onclick="output.innerHTML = 'You clicked on the Body section'">Body</a></section>
+
+    <section class="article-section"><a onclick="output.innerHTML = 'You clicked on the Section 1 section'"><b>Section 1</b></a></section>
+    <section class="article-section"><a onclick="output.innerHTML = 'You clicked on the Section 2 section'">Section 2</a></section>
+    <section class="article-section"><a onclick="output.innerHTML = 'You clicked on the Section 3 section'"><i>Section 3</i></a></section>
+    <section class="article-section"><a onclick="output.innerHTML = 'You clicked on the Conclusion section'">Conclusion</a></section>
   </article>
 
   <input type="text" id="keypress-input">
@@ -29,10 +31,12 @@
   <div id="output-target"></div>
 
   <div id="guinea-pig">Leave me alone</div>
+  <div class="buttons">
   <button id="add-color">Add color</button>
   <button id="make-large">Hulkify</button>
   <button id="add-border">Capture it</button>
   <button id="add-rounding">Rounded</button>
+  </div>
 
   <script src="events.js"></script>
 
